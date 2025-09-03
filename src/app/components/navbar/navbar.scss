@@ -1,0 +1,17 @@
+// :host {
+//   display: block;
+// }
+.badge img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+nav a {
+  padding: .4rem .6rem;
+  border-radius: 12px;
+}
+
+nav a:hover{
+  background: rgba(255,255,255,.06);
+}

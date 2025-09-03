@@ -1,0 +1,38 @@
+<header class="navbar">
+  <div
+    class="container"
+    style="
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 0;
+    "
+  >
+    <a href="#" aria-label="Inicio">
+      <img src="/images/solo_logo.png" width="25%" height="25%" alt="">
+      <!-- <svg
+        width="22"
+        height="22"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+        <circle cx="12" cy="12" r="10" stroke="url(#g1)" stroke-width="2" />
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="24" y2="24">
+            <stop stop-color="#5b8cff" />
+            <stop offset="1" stop-color="#ff44d6" />
+          </linearGradient>
+        </defs>
+      </svg> -->
+      <!-- <strong>Vardump</strong> -->
+    </a>
+    <nav style="display: flex; gap: 1rem; align-items: center;">
+      @for (l of links; track $index) {
+        <a href="{{l.href}}">{{ l.label }}</a>
+      }
+      <a href="#contact" class="btn btn-ghost">Hablemos</a>
+    </nav>
+  </div>
+</header>

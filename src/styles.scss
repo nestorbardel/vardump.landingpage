@@ -1,1 +1,71 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --bg: #0b0f14;
+  --bg-soft: #0f1520;
+  --card: rgba(255,255,255,0.06);
+  --card-2: rgba(255,255,255,0.08);
+  --text: #e6eaf2;
+  --muted: #9aa4b2;
+  --primary: #5b8cff; /* azul */
+  --accent: #ff44d6;  /* magenta */
+  --success: #3ddc97;
+  --warning: #ffcb6b;
+  --radius-xl: 28px;
+  --radius-lg: 20px;
+  --shadow-1: 0 10px 30px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.03);
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: radial-gradient(1200px 800px at 20% 10%, rgba(91,140,255,0.18), transparent 50%),
+              radial-gradient(900px 700px at 85% 15%, rgba(255,68,214,0.18), transparent 55%),
+              linear-gradient(180deg, var(--bg), #0a0d12 40%, #0a0e12 100%);
+  color: var(--text);
+}
+
+/***** Utilidades *****/
+.container { width: min(1180px, 100% - 2rem); margin-inline: auto; }
+.section { padding: 64px 0; }
+.card { background: var(--card); border-radius: var(--radius-xl); box-shadow: var(--shadow-1); backdrop-filter: blur(10px); }
+.card--hover { transition: transform .2s ease, background .2s ease, box-shadow .2s ease; }
+.card--hover:hover { transform: translateY(-4px); background: var(--card-2); box-shadow: 0 20px 40px rgba(0,0,0,.55); }
+
+.btn { display:inline-flex; align-items:center; justify-content:center; gap:.6rem; padding:.9rem 1.2rem; border-radius:18px; border:0; cursor:pointer; font-weight:600; letter-spacing:.2px; }
+.btn--primary { background: linear-gradient(90deg, var(--primary), var(--accent)); color: white; box-shadow: 0 10px 30px rgba(91,140,255,.35); }
+.btn--ghost { background: transparent; color: var(--text); border:1px solid rgba(255,255,255,.12); }
+.btn:focus-visible { outline: 3px solid rgba(91,140,255,.45); outline-offset: 2px; }
+
+.badge { display:inline-flex; align-items:center; gap:.5rem; padding:.4rem .7rem; border-radius:999px; background: rgba(255,255,255,.06); color: var(--muted); font-weight:600; font-size:.8rem; }
+
+.grid { display:grid; gap: 18px; }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 960px) { .grid-3 { grid-template-columns: 1fr; } .grid-2 { grid-template-columns: 1fr; } }
+
+h1,h2,h3 { margin:0 0 .6rem; line-height:1.1; }
+h1 { font-size: clamp(2.2rem, 1.2rem + 2.8vw, 3.2rem); font-weight: 800; }
+h2 { font-size: clamp(1.4rem, 1.1rem + 1.2vw, 2rem); font-weight: 700; }
+.lead { color: var(--muted); font-size: clamp(1rem, .9rem + .4vw, 1.15rem); }
+
+/* Inputs */
+.input, textarea { width:100%; background: rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.12); color:var(--text); border-radius:14px; padding:.9rem 1rem; transition: border .2s ease, box-shadow .2s ease; }
+.input::placeholder, textarea::placeholder { color:#7f8795; }
+.input:focus, textarea:focus { outline:none; border-color: rgba(91,140,255,.6); box-shadow: 0 0 0 4px rgba(91,140,255,.2); }
+.form-error { color: #ff8ea8; font-size:.85rem; margin-top:.35rem; }
+
+/* Decoraciones neon */
+.glow-border { position: relative; }
+.glow-border::before {
+  content:""; position:absolute; inset:-1px; border-radius: inherit; padding: 1px; background: linear-gradient(120deg, rgba(91,140,255,.8), rgba(255,68,214,.8)); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); mask-composite: exclude; pointer-events:none;
+}
+
+/* Navbar sticky */
+.navbar { position: sticky; top: 0; z-index: 100; background: rgba(11,15,20,0.4); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,.06); }
+.navbar a { color: var(--text); text-decoration: none; opacity:.9; }
+.navbar a:hover { opacity:1; }
+
+/* Footer */
+.footer { border-top: 1px solid rgba(255,255,255,.06); color: var(--muted); }
