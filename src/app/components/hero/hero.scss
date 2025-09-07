@@ -44,9 +44,11 @@
 
 .hero__right {
   display: flex;
-  gap: 0.8rem;
+  flex-direction: column;
+  //gap: 0.8rem;
   margin-top: 1rem;
-  align-items: flex-start;
+  align-items: center;
+  //justify-content: center;
 }
 
 .hero-svg {
@@ -55,9 +57,24 @@
   opacity: 0.95;
 }
 
-.hero-img{
-  width: 50%;
+.title-img{
+  width: 35%;
   height: auto;
+}
+
+.hero-img{
+  margin-top: 1rem;
+  width: 30%;
+  height: auto;
+}
+
+.hero-text{
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-align: justify;
+  //font-size: 1.1rem;
+  //line-height: 1.5;
+  color: var(--text)
 }
 
 @media (max-width: 960px) {
