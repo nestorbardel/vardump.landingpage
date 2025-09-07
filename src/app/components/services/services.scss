@@ -1,0 +1,26 @@
+/* --- File: src/app/components/services/services.component.scss */
+
+/* keyframes compartido (slide + fade) */
+@keyframes slide-fade {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Cuando Angular aplica "enter-stagger" al contenedor, los hijos reciben la animación.
+   Usamos nth-child para escalonar (stagger) mediante delays CSS. */
+.enter-stagger .service-card {
+  animation: slide-fade 520ms cubic-bezier(.0,.0,.2,1) both;
+  /* por seguridad, que no se aplique antes de que la clase exista */
+  opacity: 0;
+}
+
+/* Stagger delays (ajusta según número de tarjetas) */
+.enter-stagger .service-card:nth-child(1) { animation-delay: 0ms; }
+.enter-stagger .service-card:nth-child(2) { animation-delay: 120ms; }
+.enter-stagger .service-card:nth-child(3) { animation-delay: 240ms; }
+.enter-stagger .service-card:nth-child(4) { animation-delay: 360ms; }
+
+/* estilo base */
+.services-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap:1.5rem; margin-top:2rem; }
+.service-card { padding:1.5rem; text-align:center; border-radius:var(--radius-xl); }
+.service-icon { font-size:2.2rem; margin-bottom:.8rem; }
