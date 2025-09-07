@@ -6,7 +6,7 @@
     <div class="services-grid" animate.enter="enter-stagger">
       @for (service of services(); track $index) {
       <div class="service-card card card--hover">
-        <div class="service-icon">{{service.icon}}</div>
+        <lucide-icon [img]="service.icon" class="service-icon"></lucide-icon>
         <h3>{{service.title}}</h3>
         <p>{{service.description}}</p>
       </div>

@@ -15,8 +15,8 @@ interface NavLink {
 export class NavbarComponent {
   links: NavLink[] = [
     {href: '#service', label: 'Servicios'},
-    {href: '#portfolio', label: 'Portfolio'},
-    {href: '#testimonials', label: 'Testimonios'},
+    // {href: '#portfolio', label: 'Portfolio'},
+    // {href: '#testimonials', label: 'Testimonios'},
     {href: '#contact', label: 'Contacto'}
   ];
  }
