@@ -85,4 +85,16 @@
   .hero {
     grid-template-columns: 1fr;
   }
+  .title-img{
+    width: 25%;
+    height: auto;
+  }
+  .hero-img{
+    width: 20%;
+    height: auto;
+  }
+  .hero__right{
+    padding: 10px
+  }
+
 }

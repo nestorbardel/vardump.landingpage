@@ -7,6 +7,12 @@
   object-fit: contain;
 }
 
+.nav-img{
+  width: 100%;
+  height: auto;
+  max-width: 90px;
+}
+
 nav a {
   padding: .4rem .6rem;
   border-radius: 12px;
