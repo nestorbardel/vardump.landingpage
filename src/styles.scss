@@ -58,7 +58,7 @@ h2 { font-size: clamp(1.4rem, 1.1rem + 1.2vw, 2rem); font-weight: 700; }
 
 /* Decoraciones neon */
 .glow-border { position: relative; }
-.glow-border::before {
+.glow-border:hover::before {
   content:""; position:absolute; inset:-1px; border-radius: inherit; padding: 1px; background: linear-gradient(120deg, rgba(91,140,255,.8), rgba(255,68,214,.8)); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); mask-composite: exclude; pointer-events:none;
 }
 
