@@ -47,7 +47,7 @@ if (!this.name() || !this.email() || !this.message()) {
     }
       this.submitted.set(true);
     try {
-      await firstValueFrom(this.http.post('http://localhost:3000/send-email', {
+      await firstValueFrom(this.http.post('https://www.vardump.com.ar/send-email', {
         to: "nestorbardel@gmail.com",
         subject: "New message from contact form",
         body:`
