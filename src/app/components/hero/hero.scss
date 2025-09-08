@@ -118,6 +118,10 @@
   animation: fade-out 400ms ease-in forwards;
 }
 
+.without-line{
+  text-decoration: none;
+}
+
 @media (max-width: 960px) {
   .hero {
     grid-template-columns: 1fr;
