@@ -16,8 +16,12 @@
         <textarea type="message" name="message" id="message" [value]="message()" rows="5" (input)="onInputChangeMessage($event)"></textarea>
       </div>
       <button type="submit" class="btn btn--primary">Enviar</button>
+      @if(feedback()){
+        <p class="feedback" [ngClass]="feedback() != null ? feedback()?.type : ''">
+          {{ feedback() ? feedback()?.text : '' }}
+        </p>
+      }
 
     </form>
-<!--    }-->
   </div>
 </section>

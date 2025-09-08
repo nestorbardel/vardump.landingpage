@@ -43,13 +43,31 @@ button[type="submit"] {
   border-radius: var(--radius-xl);
 }
 
-
-@keyframes fade-in {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-
 .fade-in {
   animation: fade-in 600ms ease-out both;
+}
+
+.feedback {
+  margin-top: 1rem;
+  padding: 0.8rem 1rem;
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  animation: fade-in 400ms ease-out both;
+}
+
+.feedback.success {
+  background: rgba(0, 255, 170, 0.1);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.feedback.error {
+  background: rgba(255, 80, 80, 0.1);
+  color: #ff5050;
+  border: 1px solid #ff5050;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
 }
