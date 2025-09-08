@@ -9,18 +9,33 @@
       <div class="hero__actions" style="display: flex; gap: 2rem; align-items: center;">
 <!--        <a href="#portfolio" class="btn btn&#45;&#45;primary">Ver trabajos</a>-->
 <!--        <a href="#contact" class="btn btn&#45;&#45;ghost">Enviar mensaje</a>-->
-        <a href="#contact" class="btn btn--primary">Enviar mensaje</a>
+        <a href="#contact" class="btn without-line btn--primary">Enviar mensaje</a>
       </div>
     </div>
-    <div animate.enter="fade-in-right" class="hero__right card card--hover glow-border">
-        <img src="/images/pantera_sin_fondo_borde_blanco_redi-Photoroom.png" alt="Hero Image" class="hero-img">
-        <img src="/images/pantera_nombre_blanco_sin_fondo-recortado.png" class="title-img" alt="Hero Image">
-        <div class="hero-text">
-          <p style="text-align: center">¿Querés llevar tu negocio de moda al próximo nivel?</p>
-          <p style="text-align: center">
-            Simplificá la gestión de tu tienda de indumentaria con nuestro software. Dejá de lado las planillas y el caos. Controlá tu stock en tiempo real, gestioná tus ventas, registrá clientes y mucho más, todo desde un solo lugar.
-          </p>
+    <div animate.enter="fade-in-right" class="hero__right card card--hover glow-border fade">
+      @if(showProduct()){
+        <div class="product-container" animate.enter="fade-in">
+          <img src="/images/pantera_sin_fondo_borde_blanco_redi-Photoroom.png" alt="Hero Image" class="hero-img">
+          <img src="/images/pantera_nombre_blanco_sin_fondo-recortado.png" class="title-img" alt="Hero Image">
+          <div class="hero-text">
+            <p style="text-align: center">¿Querés llevar tu negocio de moda al próximo nivel?</p>
+            <p style="text-align: center">
+              Simplificá la gestión de tu tienda de indumentaria con nuestro software. Dejá de lado las planillas y el
+              caos. Controlá tu stock en tiempo real, gestioná tus ventas, registrá clientes y mucho más, todo desde un
+              solo lugar.
+            </p>
+          </div>
         </div>
+      } @else {
+      <div class="factory-container hero-alt-text" animate.enter="fade-in">
+        <h2>Tu Negocio es Único, Tu Software Debería Serlo</h2>
+        <p class="lead">
+          Deja de adaptarte a programas limitados. Desarrollamos Soluciones de
+          Software Personalizadas que se integran perfectamente con tu operación
+          y potencian tu ventaja competitiva.
+        </p>
+      </div>
+      }
     </div>
   </div>
 </section>
